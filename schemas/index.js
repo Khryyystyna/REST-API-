@@ -1,5 +1,5 @@
-const addSchema = require('./newContSchema');
+// const addSchema = require('./newContSchema');
 
-module.exports = {
-  addSchema,
-};
+// module.exports = {
+//   addSchema,
+// };
