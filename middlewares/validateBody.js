@@ -6,6 +6,7 @@ const validateBody = schema => {
         if (error) {
             next(HttpError(400, 'Not found'));
         }
+        next()
     }
     return func;
 }
