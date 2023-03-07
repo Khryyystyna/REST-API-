@@ -25,7 +25,11 @@ const userSchema = new Schema({
     enum: ["starter", "pro", "business"],
     default: "starter"
   },
-  token: String
+  token: {
+    type: String,
+    default: ""
+  }
+
 }, { versionKey: false, timestamps: true });
 
 userSchema.post('save', handleMongooseError);
@@ -38,9 +42,8 @@ const registerSchema = Joi.object({
 })
 
 const loginSchema = Joi.object({
-  password: Joi.string().required(),
   email: Joi.string().required(),
-  subscription: Joi.string().required(), 
+  password: Joi.string().required()
 })
 
 const schemas = {
