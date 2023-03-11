@@ -81,9 +81,11 @@ const updateAvatar = async (req, res) => {
     const avatarURL = path.join("avatars", filename);
     await User.findByIdAndUpdate(_id, {avatarURL});
 
-   return res.json({
-        avatarURL,
-    })
+//    return res.json({
+//         avatarURL,
+//    })
+    
+    return res.status(200).json(avatarURL)
 }
 
 module.exports = {
