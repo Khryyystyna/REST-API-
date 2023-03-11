@@ -85,7 +85,7 @@ const updateAvatar = async (req, res) => {
 //         avatarURL,
 //    })
     
-    return res.status(200).json(avatarURL)
+    return res.status(201).json(avatarURL)
 }
 
 module.exports = {
